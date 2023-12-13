@@ -1,0 +1,263 @@
+/* stylelint-disable media-feature-range-notation */
+
+/* import necessary fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* CSS Reset to get a consistent starting state acrosss browsers */
+
+/* Use a more-intuitive box-sizing model. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+}
+
+/*
+    Typographic tweaks!
+    -- Add accessible line-height
+    -- Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove built-in form typography styles */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* input box type=number reset */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+/* ######################################################## */
+
+/* General styling */
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f5f8fa;
+}
+
+header {
+  margin-block-start: 28px;
+  margin-inline: 40px;
+  padding-block-end: 31px;
+  border-block-end: 2px solid #e0e6ea;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 42px;
+  align-items: center;
+}
+
+nav li:first-child {
+  flex: 2;
+}
+
+nav li:last-child {
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: 2px solid #646e7a;
+}
+
+nav li {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #1d2c3c;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+main {
+  display: flex;
+  margin: 85px auto;
+  width: 60%;
+  padding-block: 42px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05),
+    0px 15px 35px 0px rgba(43, 64, 78, 0.1);
+}
+
+h1 {
+  color: #1d2c3c;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 30px;
+  font-weight: 400;
+  padding-inline-start: 48px;
+  padding-block-end: 48px;
+  border-block-end: 2px solid #f5f8fa;
+}
+
+.primary-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+form {
+  counter-reset: count;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1d2c3c;
+  font-family: Lato;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.16px;
+}
+
+.user-information {
+  padding-block-end: 40px;
+  border-block-end: 2px solid #548bc5;
+  padding-inline: 48px;
+  padding-block: 40px;
+}
+
+.user-information h2::before {
+  display: inline-flex;
+  content: counter(count); /* Use counter as content */
+  counter-increment: count; /* Increment counter */
+  color: #548bc5;
+  border: 2px solid #548bc5;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  color: #548bc5;
+  text-align: center;
+  font-family: Lato;
+  font-size: 16px;
+  letter-spacing: -0.142px;
+}
+
+.form-question {
+  display: grid;
+  grid-template-columns: repeat(autofit, 1fr);
+  gap: 30px;
+  row-gap: 15px;
+}
+
+.user-data {
+  display: flex;
+  flex-direction: column;
+}
+.user-data:nth-child(3) {
+  grid-column: span 2;
+}
+
+.user-data legend {
+  float: inline-start;
+
+  width: 100px;
+}
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+input {
+  appearance: none;
+  border: none;
+  border-radius: 4px;
+  background: #edeff2;
+}
+fieldset {
+  display: flex;
+}
+
+fieldset > input:nth-of-type(-n + 2) {
+  border-start-end-radius: 0px;
+  border-end-end-radius: 0px;
+}
+fieldset > input:nth-last-of-type(-n + 2) {
+  border-start-start-radius: 0px;
+  border-end-start-radius: 0px;
+  text-align: end;
+}
+
+input[type='submit'] {
+  flex: 1;
+  box-sizing: content-box;
+  margin-inline: 48px;
+  margin-block: 40px 24px;
+  padding: 13px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.396px;
+  border-radius: 5px;
+  background-color: #038e7d;
+}
+
+.help-text-container{
+  display: flex;
+  margin-inline: 48px;
+  padding-inline: 75px;
+}
