@@ -124,8 +124,6 @@ a {
 
 main {
   display: flex;
-  margin: 85px auto;
-  padding-block: 42px;
   border-radius: 6px;
   background: #fff;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05),
@@ -138,7 +136,7 @@ h1 {
   font-size: 30px;
   font-weight: 400;
   padding-inline-start: 48px;
-  padding-block-end: 48px;
+  padding-block: 42px 48px;
   border-block-end: 2px solid #f5f8fa;
 }
 
@@ -152,7 +150,10 @@ h1 {
 .secondary-section {
   flex: 1;
   border-radius: 0px 6px 6px 0px;
-  background: #1179bf;
+  background-color: #1179bf;
+  color: #fff;
+  padding-block: 42px;
+  padding-inline: 48px 40px;
 }
 
 form {
@@ -297,4 +298,88 @@ input[type='submit'] {
 #stripe-logo {
   align-self: center;
   margin-block: 20px 40px;
+}
+
+.secondary-section > h2 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01px;
+}
+
+.secondary-section > section > p:first-of-type {
+  display: flex;
+  align-items: baseline;
+}
+
+.secondary-section > section > p > span:first-of-type {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.015px;
+  transform: translateY(-60%);
+}
+
+.secondary-section > section span:nth-of-type(2) {
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: -0.015px;
+}
+
+.secondary-section p > span:last-of-type {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.015px;
+}
+
+.secondary-section > section > p:nth-of-type(2) {
+  color: #fff;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.008px;
+}
+
+.secondary-section ul {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.secondary-section li::before {
+  display: inline;
+  content: url(./images/marker-ul.svg);
+  width: 20px;
+  height: 20px;
+}
+
+.secondary-section li {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.agency-text {
+  padding-block: 38px 40px;
+  border-block-end: 2px solid rgba(255, 255, 255, 0.2005);
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  padding-block-start: 40px;
+  gap: 17px;
+}
+
+.reviewer-info {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.reviewer-info > img{
+  border-radius: 50%;
 }
