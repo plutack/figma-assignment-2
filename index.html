@@ -13,6 +13,8 @@
           <li>
             <a aria-label="Homepage" href="./index.html"
               ><svg
+                id="company-logo"
+                aria-hidden="true"
                 width="200"
                 height="39"
                 viewBox="0 0 200 39"
@@ -74,14 +76,15 @@
           </section>
           <section class="user-information">
             <h2>Your Payment Information</h2>
-            <section class="form-question">
-              <div class="user-data">
-                <fieldset>
-                  <legend>Credit Card</legend>
-
+            <fieldset>
+              <legend>Credit Card</legend>
+              <section class="form-question">
+                <div class="user-data">
                   <label class="hidden" for="Card-number">Card Number</label>
-                  <input type="text" name="Card-number" id="Card-number" />
+                  <input type="number" name="Card-number" id="Card-number" />
+                </div>
 
+                <div class="user-data">
                   <label class="hidden" for="expiration-date"
                     >Expiration Date</label
                   >
@@ -89,10 +92,12 @@
                     type="text"
                     name="expiration-date"
                     id="expiration-date"
-                    placeholder="'MM/YY"
+                    placeholder="MM/YY"
                     pattern="\d{2}/\d{2}"
                   />
+                </div>
 
+                <div class="user-data">
                   <label class="hidden" for="cvv">cvv</label>
                   <input
                     type="number"
@@ -101,9 +106,9 @@
                     placeholder="CVV"
                     maxlength="4"
                   />
-                </fieldset>
-              </div>
-            </section>
+                </div>
+              </section>
+            </fieldset>
           </section>
           <input type="submit" value="Buy WP Pusher" />
           <div class="help-text-container">
@@ -124,7 +129,9 @@
             </svg>
             <div class="help-text">
               <span>Need any help?</span>
-              <span>Don't hesitate to <a href="">contact support!</a></span>
+              <span
+                >Don't hesitate to <a href="">contact&nbsp;support!</a></span
+              >
             </div>
           </div>
           <svg
@@ -156,8 +163,8 @@
             <li>Email support</li>
           </ul>
           <div class="agency-text">
-            <p>Need 20 client sites?</p>
-            <a href="">Switch to the Agency plan.</a>
+            <p>Need <span>20</span> client sites?</p>
+            <a href="">Switch to the <span>Agency</span> plan.</a>
           </div>
           <article class="review">
             <p class="review-text">
@@ -172,5 +179,10 @@
         </section>
       </section>
     </main>
+    <footer>
+      <small
+        >&copy; 2018 WP Pusher IVS &CenterDot; <a href="">Terms of Service</a>
+      </small>
+    </footer>
   </body>
 </html>
