@@ -205,7 +205,7 @@ h2 {
 .user-information {
   display: flex;
   flex-direction: column;
-  border-block-end: 2px solid #548bc5;
+  border-block-end: 2px solid #F5F7FA;
   padding-inline: 48px;
   padding-block: 40px;
 }
@@ -415,6 +415,7 @@ input[type='submit'] {
   color: #fff;
   font-size: 16px;
   font-weight: 700;
+  border-block-end: 4px solid #B9F5FF;
 }
 
 .agency-text a > span {
@@ -432,7 +433,7 @@ input[type='submit'] {
   gap: 17px;
 }
 .review-text {
-  /* min-width: 227px; */
+  /* margin-block-start: 84px; */
 }
 
 .reviewer-info {
