@@ -139,9 +139,10 @@ main {
   display: grid;
   grid-template-columns: 2fr 1fr;
   border-radius: 6px;
-  margin-inline: 20%;
+  max-width: 60%;
+  margin-inline: auto;
   margin-block-start: 85px;
-  justify-content: center;
+  
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.05),
     0px 15px 35px 0px rgba(43, 64, 78, 0.1);
 }
@@ -197,7 +198,7 @@ h2 {
 }
 
 .user-information h2::before {
-  display: inline-flex;
+  display: flex;
   content: counter(count); /* Use counter as content */
   counter-increment: count; /* Increment counter */
   color: #548bc5;
@@ -223,10 +224,11 @@ h2 {
 
 .user-information:first-of-type .form-question > .user-data:last-of-type {
   grid-column: span 2;
+  max-width: 75%;
 }
 .user-information:last-of-type .form-question {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr;
 }
 
 .user-information:last-of-type .form-question > .user-data:first-of-type {
@@ -236,8 +238,9 @@ h2 {
 .user-data {
   display: flex;
   flex-direction: column;
-  /* min-width: 0; */
-  flex-grow: 1;
+  /* max-width: 226px; */
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 fieldset {
@@ -251,6 +254,10 @@ fieldset {
 .hidden {
   display: none;
 }
+
+
+
+
 
 input {
   appearance: none;
@@ -289,11 +296,8 @@ input[type='submit'] {
 }
 
 .help-text-container {
-  align-self: center;
   display: flex;
   align-content: flex-start;
-  margin-inline: 48px;
-  padding-inline: 75px;
   gap: 10px;
   justify-content: center;
   text-align: center;
@@ -415,8 +419,11 @@ input[type='submit'] {
 .review {
   display: flex;
   flex-direction: column;
-  padding-block-start: 40px;
+  /* margin-block-start: 40px; */
   gap: 17px;
+}
+.review-text {
+  /* min-width: 227px; */
 }
 
 .reviewer-info {
