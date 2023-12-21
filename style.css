@@ -152,7 +152,7 @@ main {
   display: grid;
   grid-template-columns: 65.02% 34.98%; /* calculated based of fixed with of two sections width 312px and 518px */
   border-radius: 6px;
-  max-width: 60%;
+  max-width: 67.95%; /* calculated based of fixed width of screen-width 1170px and width of child 795px */
   margin-inline: auto;
   margin-block-start: 85px;
 
@@ -251,9 +251,13 @@ h2 {
 .user-data {
   display: flex;
   flex-direction: column;
-  /* max-width: 226px; */
   min-width: 0;
+  gap: 7px;
   flex: 1 1 auto;
+}
+
+legend {
+  margin-block-end: 7px; /* similar to gap placed in user-data */
 }
 
 fieldset {
@@ -347,7 +351,8 @@ input[type='submit'] {
 
 .secondary-section > section > p:first-of-type {
   display: flex;
-  align-items: baseline;
+  height: 72px;
+  align-items: center;
   min-width: max-content;
 }
 
@@ -355,7 +360,7 @@ input[type='submit'] {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.015px;
-  transform: translateY(-60%);
+  transform: translateY(-30%);
 }
 
 .secondary-section > section span:nth-of-type(2) {
@@ -368,6 +373,7 @@ input[type='submit'] {
   font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.015px;
+  transform: translateY(60%);
 }
 
 .secondary-section > section > p:nth-of-type(2) {
@@ -444,6 +450,7 @@ input[type='submit'] {
   font-weight: 400;
   line-height: 24px; /* 133.333% */
   letter-spacing: -0.009px;
+  max-width: 227px;
 }
 
 .reviewer-info {
