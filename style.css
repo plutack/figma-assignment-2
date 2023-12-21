@@ -150,7 +150,7 @@ a {
 
 main {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 65.02% 34.98%; /* calculated based of fixed with of two sections width 312px and 518px */
   border-radius: 6px;
   max-width: 60%;
   margin-inline: auto;
@@ -182,7 +182,7 @@ h1 {
   background-color: #1179bf;
   color: #fff;
   padding-block: 42px;
-  padding-inline: 48px 40px;
+  padding-inline: 46px 39px;
 }
 
 form {
@@ -205,7 +205,7 @@ h2 {
 .user-information {
   display: flex;
   flex-direction: column;
-  border-block-end: 2px solid #F5F7FA;
+  border-block-end: 2px solid #f5f7fa;
   padding-inline: 48px;
   padding-block: 40px;
 }
@@ -384,7 +384,8 @@ input[type='submit'] {
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  margin: 0;
+  margin-block: 36px 38px;
+  max-width: fit-content;
   padding: 0;
 }
 
@@ -395,9 +396,13 @@ input[type='submit'] {
   height: 20px;
 }
 
+.secondary-section b {
+  font-weight: 700;
+}
+
 .secondary-section li {
   display: flex;
-  gap: 30px;
+  gap: 11px;
   align-items: start;
   line-height: normal;
 }
@@ -407,7 +412,7 @@ input[type='submit'] {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: -0.008px;
-  padding-block: 38px 40px;
+  padding-block-end: 41px;
   border-block-end: 2px solid rgba(255, 255, 255, 0.2005);
 }
 
@@ -415,7 +420,8 @@ input[type='submit'] {
   color: #fff;
   font-size: 16px;
   font-weight: 700;
-  border-block-end: 4px solid #B9F5FF;
+  text-decoration: 4px underline #b9f5ff;
+  text-decoration-skip-ink: none;
 }
 
 .agency-text a > span {
@@ -429,11 +435,15 @@ input[type='submit'] {
 .review {
   display: flex;
   flex-direction: column;
-  /* margin-block-start: 40px; */
+  margin-block-start: 41px;
   gap: 17px;
 }
 .review-text {
-  /* margin-block-start: 84px; */
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 24px; /* 133.333% */
+  letter-spacing: -0.009px;
 }
 
 .reviewer-info {
