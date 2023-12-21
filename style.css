@@ -279,6 +279,24 @@ input {
   background: #edeff2;
 }
 
+.user-information:first-of-type input {
+  padding: 9px 27px 10px 13px;
+}
+.user-information:last-of-type input {
+  padding-block: 9px 10px;
+}
+
+.user-information:last-of-type .form-question .user-data:first-of-type input {
+  padding-inline-start: 13px;
+}
+
+.user-information:last-of-type
+  .form-question
+  .user-data:nth-last-of-type(-n + 2)
+  input {
+  padding-inline-end: 16px;
+}
+
 .user-information:last-of-type
   .form-question
   .user-data:nth-of-type(-n + 2)
@@ -450,7 +468,6 @@ input[type='submit'] {
   font-weight: 400;
   line-height: 24px; /* 133.333% */
   letter-spacing: -0.009px;
-  max-width: 227px;
 }
 
 .reviewer-info {
