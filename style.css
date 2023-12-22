@@ -95,6 +95,15 @@ button {
 /* ######################################################## */
 
 /* General styling */
+.accessible {
+  position: relative;
+  inset-inline-start: -1000px;
+}
+
+.accessible:focus {
+  inset-inline-start: initial;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   background-color: #f5f8fa;
@@ -212,8 +221,10 @@ h2 {
 
 .user-information h2::before {
   display: flex;
-  content: counter(count); /* Use counter as content */
-  counter-increment: count; /* Increment counter */
+  content: counter(
+    count
+  ); /* create automatic numbering for clas:user-information */
+  counter-increment: count;
   color: #548bc5;
   border: 2px solid #548bc5;
   border-radius: 50%;
@@ -400,7 +411,7 @@ input[type='submit'] {
   font-size: 16px;
   font-style: italic;
   font-weight: 400;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   letter-spacing: -0.008px;
 }
 
@@ -409,7 +420,7 @@ input[type='submit'] {
   align-items: flex-start;
   gap: 16px;
   margin-block: 36px 38px;
-  max-width: fit-content;
+
   padding: 0;
 }
 
@@ -466,7 +477,7 @@ input[type='submit'] {
   font-size: 18px;
   font-style: italic;
   font-weight: 400;
-  line-height: 24px; /* 133.333% */
+  line-height: 24px;
   letter-spacing: -0.009px;
   padding: 5px;
 }
