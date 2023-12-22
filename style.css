@@ -96,11 +96,12 @@ button {
 
 /* General styling */
 .accessible {
-  position: relative;
+  position: absolute;
   inset-inline-start: -1000px;
 }
 
 .accessible:focus {
+  position: initial;
   inset-inline-start: initial;
 }
 
